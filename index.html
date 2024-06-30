@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- the link sets up bootstrap to apply to the html page -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <!-- establishes papaparse which converts json to csv -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"></script>
 </head>
 
@@ -17,6 +19,34 @@
             <h2>Player</h2>
             <input name="PlayerName" id="playerSelect" onchange="LoadPlayer()" list="players"/>
             <datalist id="players"></datalist>
+            <br><br>
+            <h2>Character</h2>
+            <input name="CharacterName" id="characterSelect" onchange="LoadCharacter()" list="characters"/>
+            <datalist id="characters"></datalist>
+            <br><br>
+            <h2>Level</h2>
+            <!-- level determines proficiency bonus through onchange -->
+            <input name="Level" type="number" id="playerLevel" min="1" max="20" value="1" onchange="SetProficiencyBonus()">
+            <br><br>
+            <h2>Ability Scores</h2>
+            <br>
+            <table class="table">
+                <tr>
+                    <th>Ability</th>
+                    <th>Score</th>
+                    <th>Mod</th>
+                </tr>
+                <tr>
+                    <td>Strength</td>
+                    <td>
+                        <!-- When changed, updates the value of related Modifier -->
+                        <input name="STR" type="number" value="10" id="strScore" onchange="UpdateModifiers()">
+                    </td>
+                    <td>
+                        <input type="number" value="0" id="strMod">
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </form>
