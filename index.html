@@ -103,7 +103,16 @@
 
         <div class="col-4">
             <h2>Armor</h2>
-            <h6></h6>
+            <h6>Equipped Armor</h6>
+            <select name="Armor" id="equippedArmor" onchange="UpdateAC()">
+                <option value="unarmored">None</option>
+                <optgroup id="lightArmor" value="Light Armor" label="Light Armor">
+                    <option value="padded">Padded</option>
+                    <option value="leather">Leather</option>
+                    <option value="studded">Studded Leather</option>
+                </optgroup>
+                
+            </select>
         </div>
     </div>
 </form>
