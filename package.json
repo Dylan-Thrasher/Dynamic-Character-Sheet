@@ -1,0 +1,12 @@
+{
+  "name": "dynamic-character-sheet",
+  "version": "1.0.0",
+  "description": "A dynamic character sheet following the Midnight Hatter Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
