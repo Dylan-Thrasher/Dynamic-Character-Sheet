@@ -156,8 +156,34 @@
             <br>
 
             <div class="center-me">
+                <span>Hit Dice:</span>
+                <input name="HitDice" type="number" class="stat" id="hitDice"/> / <span class="dice">d</span>
+                <select name="HitDie" id="hitDie">
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="20">20</option>
+                </select>
                 
+                <br><br>
+
+                <div class="btn btn-info" onclick="ShortRest()" id="shortRestBtn">Short Rest</div>
+
             </div>
+        </div>
+
+        <div class="col-4">
+            <h2>Proficiency Bonus</h2>
+
+            <br>
+
+            <input type="number" id="profBonus" value="2">
+
+            <br><br>
+
+            <h2>Skills</h2>
         </div>
     </div>
 </form>
