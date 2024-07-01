@@ -141,7 +141,22 @@
             <div class="center-me">
                 <h2>Hit Points</h2>
                 <span>HP: </span>
-                <input name="HP" class="stat" type="number" id="currentHP">
+                <input name="HP" class="stat" type="number" id="currentHP"> /
+                <input name="MaxHP" class="stat" type="number" id="maxHP">
+            </div>
+
+            <br>
+
+            <div class="center-me">
+                <span class="btn btn-danger" onclick="TakeDamage()">Damage</span>
+                <input type="number" class="stat" id="modHP" min="0"/>
+                <span class="btn btn-success" onclick="HealHP()">Heal</span>
+            </div>
+
+            <br>
+
+            <div class="center-me">
+                
             </div>
         </div>
     </div>
