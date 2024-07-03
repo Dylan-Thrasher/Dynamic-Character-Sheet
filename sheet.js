@@ -12,3 +12,17 @@ function LoadSheet() {
         }
     })
 }
+
+function PopulateData(data) {
+    let playerList;
+    let uniquePlayers = [];
+    for (var i = 0; i < data.length; i++) {
+        if (!uniquePlayers.includes(data[i].PlayerName))
+            {uniquePlayers.push(data[i].PlayerName);
+                playerList += '<option>' + data[i].PlayerName + '</option>'
+            }
+    }
+    document.getElementById("players").innerHTML = playerList;
+    LoadPlayer()
+}
+
