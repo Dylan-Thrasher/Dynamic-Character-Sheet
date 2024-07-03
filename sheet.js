@@ -17,6 +17,7 @@ function PopulateData(data) {
     let playerList;
     let uniquePlayers = [];
     for (var i = 0; i < data.length; i++) {
+        // if player name does not exist, it will add the player to the list
         if (!uniquePlayers.includes(data[i].PlayerName))
             {uniquePlayers.push(data[i].PlayerName);
                 playerList += '<option>' + data[i].PlayerName + '</option>'
@@ -25,4 +26,3 @@ function PopulateData(data) {
     document.getElementById("players").innerHTML = playerList;
     LoadPlayer()
 }
-
