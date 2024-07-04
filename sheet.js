@@ -26,3 +26,16 @@ function PopulateData(data) {
     document.getElementById("players").innerHTML = playerList;
     LoadPlayer()
 }
+
+function LoadPlayer() {
+    let selectedPlayer = document.getElementById("playerSelect").ariaValueMax;
+    let playerCharacters;
+    for (let i = 0; i < characterData.length; i++) {
+        if (characterData[i].PlayerName == selectedPlayer)
+            {
+                playerCharacters += '<option>' + characterData[i].CharacterName + '</option>'
+            }   
+    }
+    document.getElementById("characters").innerHTML = playerCharacters;
+    LoadCharacter()
+}
