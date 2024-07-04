@@ -18,10 +18,10 @@ function PopulateData(data) {
     let uniquePlayers = [];
     for (var i = 0; i < data.length; i++) {
         // if player name does not exist, it will add the player to the list
-        if (!uniquePlayers.includes(data[i].PlayerName))
-            {uniquePlayers.push(data[i].PlayerName);
-                playerList += '<option>' + data[i].PlayerName + '</option>'
-            }
+        if (!uniquePlayers.includes(data[i].PlayerName)) {
+            uniquePlayers.push(data[i].PlayerName);
+            playerList += '<option>' + data[i].PlayerName + '</option>'
+        }
     }
     document.getElementById("players").innerHTML = playerList;
     LoadPlayer()
@@ -31,10 +31,9 @@ function LoadPlayer() {
     let selectedPlayer = document.getElementById("playerSelect").ariaValueMax;
     let playerCharacters;
     for (let i = 0; i < characterData.length; i++) {
-        if (characterData[i].PlayerName == selectedPlayer)
-            {
-                playerCharacters += '<option>' + characterData[i].CharacterName + '</option>'
-            }   
+        if (characterData[i].PlayerName == selectedPlayer) {
+            playerCharacters += '<option>' + characterData[i].CharacterName + '</option>'
+        }
     }
     document.getElementById("characters").innerHTML = playerCharacters;
     LoadCharacter()
@@ -57,12 +56,28 @@ function SetLevel() {
             document.getElementById("playerLevel").value = characterData[i].Level;
             SetProficiencyBonus();
             return;
-        }       
+        }
     }
 }
 
 function SetProficiencyBonus() {
     let level = document.getElementById("playerLevel").value;
-    document.getElementById("profBonus").value = Math.floor(2 + ((level-1)/4));
+    document.getElementById("profBonus").value = Math.floor(2 + ((level - 1) / 4));
+}
+
+function UpdateAbilityScores() {
+    let selectedCharacter = document.getElementById("characterSelected").value;
+    for (let i = 0; i < characterData.length; i++) {
+        if (characterData[i].CharacterName == selectedCharacter) {
+            document.getElementById("strScore").value = characterData[i].STR;
+            document.getElementById("dexScore").value = characterData[i].DEX;
+            document.getElementById("conScore").value = characterData[i].CON;
+            document.getElementById("intScore").value = characterData[i].INT;
+            document.getElementById("wisScore").value = characterData[i].WIS;
+            document.getElementById("chaScore").value = characterData[i].CHA;
+            UpdateModifiers();
+            return;
+        }
+    }
 }
 
