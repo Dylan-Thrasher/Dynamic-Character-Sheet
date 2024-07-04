@@ -96,4 +96,33 @@ function UpdateModifiers() {
     document.getElementById("chaMod").value = Math.floor((chaScore - 10)/2);
     SetSkills();
     UpdateAC();
+}
+
+function UpdateSkillProficiency() {
+    let selectedCharacter = document.getElementById("characterSelect").value;
+    for (let i = 0; i < characterData.length; i++) {
+      if (characterData[i].CharacterName == selectedCharacter)
+      {
+        document.getElementById("acroProf").checked = IsTrue(characterData[i].Acrobatics); 
+        document.getElementById("animProf").checked = IsTrue(characterData[i].AnimalHandling);
+        document.getElementById("arcaProf").checked = IsTrue(characterData[i].Arcana);
+        document.getElementById("athlProf").checked = IsTrue(characterData[i].Athletics);
+        document.getElementById("decProf").checked = IsTrue(characterData[i].Deception);
+        document.getElementById("hisProf").checked = IsTrue(characterData[i].History);
+        document.getElementById("insProf").checked = IsTrue(characterData[i].Insight);
+        document.getElementById("intiProf").checked = IsTrue(characterData[i].Intimidation);
+        document.getElementById("invProf").checked = IsTrue(characterData[i].Investigation);
+        document.getElementById("medProf").checked = IsTrue(characterData[i].Medicine);
+        document.getElementById("natProf").checked = IsTrue(characterData[i].Nature);
+        document.getElementById("percProf").checked = IsTrue(characterData[i].Perception);
+        document.getElementById("perfProf").checked = IsTrue(characterData[i].Performance);
+        document.getElementById("persProf").checked = IsTrue(characterData[i].Persuasion);
+        document.getElementById("relProf").checked = IsTrue(characterData[i].Religion);
+        document.getElementById("sleiProf").checked = IsTrue(characterData[i].SleightOfHand);
+        document.getElementById("steProf").checked = IsTrue(characterData[i].Stealth);
+        document.getElementById("survProf").checked = IsTrue(characterData[i].Survival);
+        SetSkills();
+        return;
+      } 
+    }
   }
