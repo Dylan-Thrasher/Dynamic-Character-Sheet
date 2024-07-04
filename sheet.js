@@ -39,3 +39,13 @@ function LoadPlayer() {
     document.getElementById("characters").innerHTML = playerCharacters;
     LoadCharacter()
 }
+
+function LoadCharacter() {
+    SetLevel();
+    UpdateAbilityScores();
+    UpdateSkillProficiency();
+    UpdateHP();
+    UpdateHitDice();
+    LoadGear();
+    UpdateAC();
+}
