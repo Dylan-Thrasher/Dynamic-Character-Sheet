@@ -146,3 +146,13 @@ function UpdateHitDice() {
         }
     }
 }
+
+function LoadGear() {
+    let selectedCharacter = document.getElementById("characterSelect").value;
+    for (let i = 0; i < characterData.length; i++) {
+        if (characterData[i].CharacterName == selectedCharacter) {
+            document.getElementById("equippedArmor").value = characterData[i].Armor;
+            document.getElementById("equippedShield").value = characterData[i].Shield;
+        }
+    }
+}
