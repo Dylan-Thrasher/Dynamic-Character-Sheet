@@ -60,3 +60,9 @@ function SetLevel() {
         }       
     }
 }
+
+function SetProficiencyBonus() {
+    let level = document.getElementById("playerLevel").value;
+    document.getElementById("profBonus").value = Math.floor(2 + ((level-1)/4));
+}
+
