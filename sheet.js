@@ -135,3 +135,14 @@ function UpdateHP() {
         }
     }
 }
+
+
+function UpdateHitDice() {
+    let selectedCharacter = document.getElementById("characterSelect").value;
+    for (let i = 0; i < characterData.length; i++) {
+        if (characterData[i].CharacterName == selectedCharacter) {
+            document.getElementById("hitDice").value = characterData[i].HitDice;
+            document.getElementById("hitDie").value = characterData[i].HitDie;
+        }
+    }
+}
