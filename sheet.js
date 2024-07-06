@@ -382,3 +382,18 @@ function LongRest() {
     ResetHitDice();
 }
 
+function ShortRest() {
+    let currentDice = parseInt(document.getElementById("hitDice").value);
+    if (currentDice > 0) {
+      let currentHP = parseInt(document.getElementById("currentHP").value);
+      let maxHP = parseInt(document.getElementById("maxHP").value);
+      let maxDie = parseInt(document.getElementById("hitDie").value);
+      let hitDieRoll = Math.floor(Math.random() * Math.floor(maxDie));
+      if ((currentHP + hitDieRoll) <= maxHP) {
+        document.getElementById("currentHP").value = currentHP + hitDieRoll;
+      } else {
+        document.getElementById("currentHP").value = maxHP;
+      }
+      document.getElementById("hitDice").value = currentDice - 1;
+    }
+  }
