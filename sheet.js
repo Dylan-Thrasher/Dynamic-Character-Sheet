@@ -156,3 +156,64 @@ function LoadGear() {
         }
     }
 }
+
+function UpdateAC() {
+    let armor = document.getElementById("equippedArmor").value;
+    if (armor == 'padded') {
+      document.getElementById("armorClass").value = parseInt(document.getElementById("dexMod").value) + 11;
+    } else if (armor == 'leather') {
+      document.getElementById("armorClass").value = parseInt(document.getElementById("dexMod").value) + 11;
+    } else if (armor == 'studded') {
+      document.getElementById("armorClass").value = parseInt(document.getElementById("dexMod").value) + 12;
+    } else if (armor == 'hide') {
+      let tempArmor = parseInt(document.getElementById("dexMod").value) + 12;
+      if (tempArmor > 14) {
+         document.getElementById("armorClass").value = 14;
+      } else {
+       document.getElementById("armorClass").value = tempArmor; 
+      }
+    } else if (armor == 'chain') {
+      let tempArmor = parseInt(document.getElementById("dexMod").value) + 13;
+      if (tempArmor > 15) {
+         document.getElementById("armorClass").value = 15;
+      } else {
+       document.getElementById("armorClass").value = tempArmor; 
+      }
+    } else if (armor == 'scale') {
+      let tempArmor = parseInt(document.getElementById("dexMod").value) + 14;
+      if (tempArmor > 16) {
+         document.getElementById("armorClass").value = 16;
+      } else {
+       document.getElementById("armorClass").value = tempArmor; 
+      }
+    } else if (armor == 'breastplate') {
+      let tempArmor = parseInt(document.getElementById("dexMod").value) + 14;
+      if (tempArmor > 16) {
+         document.getElementById("armorClass").value = 16;
+      } else {
+       document.getElementById("armorClass").value = tempArmor; 
+      }
+    } else if (armor == 'halfplate') {
+      let tempArmor = parseInt(document.getElementById("dexMod").value) + 15;
+      if (tempArmor > 17) {
+         document.getElementById("armorClass").value = 17;
+      } else {
+       document.getElementById("armorClass").value = tempArmor; 
+      }
+    } else if (armor == 'ringmail') {
+      document.getElementById("armorClass").value = 14;
+    } else if (armor == 'chainmail') {
+      document.getElementById("armorClass").value = 16;
+    } else if (armor == 'splint') {
+      document.getElementById("armorClass").value = 17;
+    } else if (armor == 'plate') {
+      document.getElementById("armorClass").value = 18;
+    } else {
+      document.getElementById("armorClass").value = parseInt(document.getElementById("dexMod").value) + 10;
+    }
+    if (document.getElementById("equippedShield").value == 'shield') {
+      document.getElementById("armorClass").value = parseInt(document.getElementById("armorClass").value) + 2;
+    } else {
+      document.getElementById("armorClass").value = parseInt(document.getElementById("armorClass").value);
+    }
+  }
