@@ -376,3 +376,9 @@ function HealHP() {
         document.getElementById("currentHP").value = maxHP;
     }
 }
+
+function LongRest() {
+    ResetHP();
+    ResetHitDice();
+}
+
