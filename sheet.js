@@ -370,7 +370,7 @@ function HealHP() {
     let amount = parseInt(document.getElementById("modHP").value);
     let currentHP = parseInt(document.getElementById("currentHP").value);
     let maxHP = parseInt(document.getElementById("maxHP").value);
-    if((currentHP + amount) <= maxHP) {
+    if ((currentHP + amount) <= maxHP) {
         document.getElementById("currentHP").value = currentHP + amount;
     } else {
         document.getElementById("currentHP").value = maxHP;
@@ -385,15 +385,20 @@ function LongRest() {
 function ShortRest() {
     let currentDice = parseInt(document.getElementById("hitDice").value);
     if (currentDice > 0) {
-      let currentHP = parseInt(document.getElementById("currentHP").value);
-      let maxHP = parseInt(document.getElementById("maxHP").value);
-      let maxDie = parseInt(document.getElementById("hitDie").value);
-      let hitDieRoll = Math.floor(Math.random() * Math.floor(maxDie));
-      if ((currentHP + hitDieRoll) <= maxHP) {
-        document.getElementById("currentHP").value = currentHP + hitDieRoll;
-      } else {
-        document.getElementById("currentHP").value = maxHP;
-      }
-      document.getElementById("hitDice").value = currentDice - 1;
+        let currentHP = parseInt(document.getElementById("currentHP").value);
+        let maxHP = parseInt(document.getElementById("maxHP").value);
+        let maxDie = parseInt(document.getElementById("hitDie").value);
+        let hitDieRoll = Math.floor(Math.random() * Math.floor(maxDie));
+        if ((currentHP + hitDieRoll) <= maxHP) {
+            document.getElementById("currentHP").value = currentHP + hitDieRoll;
+        } else {
+            document.getElementById("currentHP").value = maxHP;
+        }
+        document.getElementById("hitDice").value = currentDice - 1;
     }
-  }
+}
+
+function ResetHP() {
+    document.getElementById("currentHP").value = document.getElementById("maxHP").value;
+}
+
