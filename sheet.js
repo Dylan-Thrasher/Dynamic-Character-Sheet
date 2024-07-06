@@ -365,3 +365,14 @@ function TakeDamage() {
         document.getElementById("currentHP").value = 0
     }
 }
+
+function HealHP() {
+    let amount = parseInt(document.getElementById("modHP").value);
+    let currentHP = parseInt(document.getElementById("currentHP").value);
+    let maxHP = parseInt(document.getElementById("maxHP").value);
+    if((currentHP + amount) <= maxHP) {
+        document.getElementById("currentHP").value = currentHP + amount;
+    } else {
+        document.getElementById("currentHP").value = maxHP;
+    }
+}
