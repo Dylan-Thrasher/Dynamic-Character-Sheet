@@ -355,3 +355,13 @@ function SetSkills() {
     }
 
 }
+
+function TakeDamage() {
+    let amount = document.getElementById("modHP").value;
+    let currentHP = document.getElementById("currentHP").value;
+    if ((currentHP - amount) >= 0) {
+        document.getElementById("currentHP").value = currentHP - amount;
+    } else {
+        document.getElementById("currentHP").value = 0
+    }
+}
