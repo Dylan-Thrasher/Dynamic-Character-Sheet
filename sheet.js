@@ -402,3 +402,7 @@ function ResetHP() {
     document.getElementById("currentHP").value = document.getElementById("maxHP").value;
 }
 
+function ResetHitDice() {
+    document.getElementById("hitDice").value = document.getElementById("playerLevel").value;
+}
+
