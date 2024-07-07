@@ -419,3 +419,5 @@ function SaveData() {
         }
     )
 }
+
+window.onload = LoadSheet();
