@@ -412,7 +412,7 @@ function IsTrue() {
 
 function SaveData() {
     let formData = new FormData(document.getElementById("charSheet"));
-    fetch('<Web App Url>',
+    fetch('https://script.google.com/macros/s/AKfycbzjtm8LiRmld7ct0DoDrl-pXg6v_vAUQiw_pFQkJ49cSP_YnkSKFbvbueiiQ13CR4-1/exec',
         {
             method: 'post',
             body: formData,
