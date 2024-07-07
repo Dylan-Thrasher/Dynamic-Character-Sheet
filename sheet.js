@@ -410,3 +410,12 @@ function IsTrue() {
     if (string.toLowerCase() == 'true') { return true; }
 }
 
+function SaveData() {
+    let formData = new FormData(document.getElementById("charSheet"));
+    fetch('<Web App Url>',
+        {
+            method: 'post',
+            body: formData,
+        }
+    )
+}
