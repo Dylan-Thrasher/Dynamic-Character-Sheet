@@ -406,3 +406,7 @@ function ResetHitDice() {
     document.getElementById("hitDice").value = document.getElementById("playerLevel").value;
 }
 
+function IsTrue() {
+    if (string.toLowerCase() == 'true') { return true; }
+}
+
