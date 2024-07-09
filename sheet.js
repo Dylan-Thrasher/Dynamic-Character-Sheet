@@ -408,7 +408,7 @@ function ResetHitDice() {
 }
 
 // google sheets checkbox returns true in all capitals, this changes it to lowercase to translate information
-function IsTrue() {
+function IsTrue(string) {
     if (string.toLowerCase() == 'true') { return true; }
 }
 
