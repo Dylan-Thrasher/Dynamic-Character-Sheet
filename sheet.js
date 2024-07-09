@@ -1,5 +1,6 @@
 let characterData = [];
 
+// references the relevant google sheet for stored information
 function LoadSheet() {
     const file = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTIvCXjJPwM1bnO-O9CmbB6VtbYLmVzBFpPohg3Bb2vfDxhoZwS-tJIZgyC2KagCiOGU3Owlky6jddx/pub?gid=0&single=true&output=csv"
 
@@ -412,6 +413,7 @@ function IsTrue() {
 
 function SaveData() {
     let formData = new FormData(document.getElementById("charSheet"));
+    // references the relevant apps script in order to allow updating of sheet outside of google sheet
     fetch('https://script.google.com/macros/s/AKfycbzjtm8LiRmld7ct0DoDrl-pXg6v_vAUQiw_pFQkJ49cSP_YnkSKFbvbueiiQ13CR4-1/exec',
         {
             method: 'post',
