@@ -407,6 +407,7 @@ function ResetHitDice() {
     document.getElementById("hitDice").value = document.getElementById("playerLevel").value;
 }
 
+// google sheets checkbox returns true in all capitals, this changes it to lowercase to translate information
 function IsTrue() {
     if (string.toLowerCase() == 'true') { return true; }
 }
@@ -422,4 +423,5 @@ function SaveData() {
     )
 }
 
+// when window is loaded, execute LoadSheet function
 window.onload = LoadSheet();
