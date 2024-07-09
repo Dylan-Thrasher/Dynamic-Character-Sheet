@@ -29,7 +29,7 @@ function PopulateData(data) {
 }
 
 function LoadPlayer() {
-    let selectedPlayer = document.getElementById("playerSelect").ariaValueMax;
+    let selectedPlayer = document.getElementById("playerSelect").value;
     let playerCharacters;
     for (let i = 0; i < characterData.length; i++) {
         if (characterData[i].PlayerName == selectedPlayer) {
