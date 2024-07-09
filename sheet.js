@@ -67,7 +67,7 @@ function SetProficiencyBonus() {
 }
 
 function UpdateAbilityScores() {
-    let selectedCharacter = document.getElementById("characterSelected").value;
+    let selectedCharacter = document.getElementById("characterSelect").value;
     for (let i = 0; i < characterData.length; i++) {
         if (characterData[i].CharacterName == selectedCharacter) {
             document.getElementById("strScore").value = characterData[i].STR;
