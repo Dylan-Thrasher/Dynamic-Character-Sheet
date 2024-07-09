@@ -1,32 +1,36 @@
 /* adjusting the inputs within tables specifically that use numbers */
 
+
 .table input[type=number] {
-    width: 100%;
-  }
-  
-  .stat {
-    width:50px;
-    vertical-align:middle;
-  }
-  
-  .btn {
-    border-radius:5px;
-  }
-  
-  .center-me {
-    text-align:center;
-  }
-  
-  .dice {
-    vertical-align:middle;
-  }
-  
-  .container {
-    max-width:75%;
-  }
-  
-  select {
-    padding:4px;
-    min-width:50px;
-    vertical-align:middle;
-  }
+  width: 100%;
+}
+
+/* setting a static width and alignment */
+.stat {
+  width: 50px;
+  vertical-align: middle;
+}
+
+/* updating borders for buttons */
+.btn {
+  border-radius: 5px;
+}
+
+.center-me {
+  text-align: center;
+}
+
+.dice {
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 75%;
+}
+
+/* providing space for sections below */
+select {
+  padding: 4px;
+  min-width: 50px;
+  vertical-align: middle;
+}
