@@ -1,6 +1,7 @@
 /* adjusting the inputs within tables specifically that use numbers */
 body {
   background: rgb(116, 10, 165);
+  color: #096309;
 }
 
 .table input[type=number] {
