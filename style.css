@@ -2,11 +2,15 @@
 body {
   background: linear-gradient(red, blue);
   background: linear-gradient(in lch, red, blue);
-  color: #096309;
+  color: rgb(39, 127, 156);
 }
 
 .table input[type=number] {
   width: 100%;
+}
+
+.table tr {
+  color: rgb(39, 127, 156);
 }
 
 /* setting a static width and alignment */
