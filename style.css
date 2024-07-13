@@ -1,6 +1,7 @@
 /* adjusting the inputs within tables specifically that use numbers */
 body {
-  background: rgb(116, 10, 165);
+  background: linear-gradient(red, blue);
+  background: linear-gradient(in lch, red, blue);
   color: #096309;
 }
 
