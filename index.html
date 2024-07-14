@@ -20,6 +20,7 @@
         <form id="charSheet" name="characterSheet">
             <div class="row">
                 <div class="col-4 text-center">
+                    <section>
                     <h2>Player</h2>
                     <input name="PlayerName" id="playerSelect" onchange="LoadPlayer()" list="players" />
                     <datalist id="players"></datalist>
@@ -32,7 +33,8 @@
                     <!-- level determines proficiency bonus through onchange -->
                     <input name="Level" type="number" id="playerLevel" min="1" max="20" value="1"
                         onchange="SetProficiencyBonus()">
-                    <br><br>
+                    </section>
+                    <section>
                     <h2>Ability Scores</h2>
                     <br>
                     <table class="table">
@@ -104,9 +106,11 @@
                     <div class="text-center">
                         <div class="btn btn-info" onclick="LoadCharacter()">Load Data</div>
                     </div>
+                </section>
                 </div>
 
-                <div class="col-4 text-center">
+                <div class="col-4 text-center d-flex row align-content-around">
+                    <section>
                     <h2>Armor</h2>
                     <h6>Equipped Armor</h6>
                     <select name="Armor" id="equippedArmor" onchange="UpdateAC()">
@@ -140,9 +144,10 @@
 
                     <h6>AC:</h6>
                     <input type="number" id="armorClass" placeholder="0">
-
+                </section>
                     <br><br>
 
+                    <section>
                     <div class="center-me">
                         <h2>Hit Points</h2>
                         <span>HP: </span>
@@ -177,6 +182,7 @@
                         <div class="btn btn-info" onclick="ShortRest()" id="shortRestBtn">Short Rest</div>
                         <div class="btn btn-success" onclick="LongRest()" id="longRestBtn">Long Rest</div>
                     </div>
+                </section>
                 </div>
 
                 <div class="col-4 text-center">
