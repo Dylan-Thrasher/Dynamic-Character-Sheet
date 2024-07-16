@@ -12,6 +12,7 @@ body {
 
 #shieldHere {
   background-image: url(/assets/shield.png);
+  background-size: contain;
 }
 
 .table tr {
