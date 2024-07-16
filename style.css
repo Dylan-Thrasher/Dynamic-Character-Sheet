@@ -12,7 +12,7 @@ html, body {
 }
 
 #shieldHere {
-  background-image: url(shield.png);
+  background-image: url('./shield.png');
   background-size: contain;
 }
 
