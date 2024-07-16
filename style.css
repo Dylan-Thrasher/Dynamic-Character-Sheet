@@ -5,6 +5,7 @@ html, body {
   background-size: cover;
   height: 100%;
   color: rgb(39, 127, 156);
+  min-width: 935px;
 }
 
 .table input[type=number] {
@@ -13,7 +14,14 @@ html, body {
 
 #shieldHere {
   background-image: url('./shield.png');
-  background-size: contain;
+  /* background-size: contain no-repeat center center fixed; */
+  background-position: top center;
+  height: 500px;
+  padding-top: 100px;
+}
+
+#shieldHere input[type=number] {
+  width: 10%;
 }
 
 .table tr {

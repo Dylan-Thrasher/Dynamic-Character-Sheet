@@ -109,43 +109,7 @@
                 </section>
                 </div>
 
-                <div class="col-4 text-center d-flex row align-content-around mx-2">
-                    <section id="shieldHere">
-                    <h2>Armor</h2>
-                    <h6>Equipped Armor</h6>
-                    <select name="Armor" id="equippedArmor" onchange="UpdateAC()">
-                        <option value="unarmored">None</option>
-                        <optgroup id="lightArmor" value="Light Armor" label="Light Armor">
-                            <option value="padded">Padded</option>
-                            <option value="leather">Leather</option>
-                            <option value="studded">Studded Leather</option>
-                        </optgroup>
-                        <optgroup id="mediumArmor" value="Medium Armor" label="Medium Armor">
-                            <option value="hide">Hide</option>
-                            <option value="chain">Chain Shirt</option>
-                            <option value="scale">Scale Mail</option>
-                            <option value="breastplate">Breastplate</option>
-                        </optgroup>
-                        <optgroup id="heavyArmor" value="Heavy Armor" label="Heavy Armor">
-                            <option value="ringmail">Ring Mail</option>
-                            <option id="chainmailArmor" value="chainmail">Chain Mail</option>
-                            <option id="splintArmor" value="splint">Splint</option>
-                            <option id="plateArmor" value="plate">Plate</option>
-                        </optgroup>
-                    </select>
-
-                    <br><br>
-                    <h6>Equipped Shield:</h6>
-                    <select name="Shield" id="equippedShield" onchange="UpdateAC()">
-                        <option value="none">None</option>
-                        <option value="shield">Shield</option>
-                    </select>
-                    <br><br>
-
-                    <h6>AC:</h6>
-                    <input type="number" id="armorClass" placeholder="0">
-                </section>
-                    <br><br>
+                <div class="col-4 text-center d-flex row align-content-around justify-content-center mx-2">
 
                     <section>
                     <div class="center-me">
@@ -182,6 +146,44 @@
                         <div class="btn btn-info" onclick="ShortRest()" id="shortRestBtn">Short Rest</div>
                         <div class="btn btn-success" onclick="LongRest()" id="longRestBtn">Long Rest</div>
                     </div>
+                </section>
+
+                <br><br>
+
+                <section id="shieldHere" class="justify-content-center">
+                    <h2>Armor</h2>
+                    <h6>Equipped Armor</h6>
+                    <select name="Armor" id="equippedArmor" onchange="UpdateAC()">
+                        <option value="unarmored">None</option>
+                        <optgroup id="lightArmor" value="Light Armor" label="Light Armor">
+                            <option value="padded">Padded</option>
+                            <option value="leather">Leather</option>
+                            <option value="studded">Studded Leather</option>
+                        </optgroup>
+                        <optgroup id="mediumArmor" value="Medium Armor" label="Medium Armor">
+                            <option value="hide">Hide</option>
+                            <option value="chain">Chain Shirt</option>
+                            <option value="scale">Scale Mail</option>
+                            <option value="breastplate">Breastplate</option>
+                        </optgroup>
+                        <optgroup id="heavyArmor" value="Heavy Armor" label="Heavy Armor">
+                            <option value="ringmail">Ring Mail</option>
+                            <option id="chainmailArmor" value="chainmail">Chain Mail</option>
+                            <option id="splintArmor" value="splint">Splint</option>
+                            <option id="plateArmor" value="plate">Plate</option>
+                        </optgroup>
+                    </select>
+
+                    <br><br>
+                    <h6>Equipped Shield:</h6>
+                    <select name="Shield" id="equippedShield" onchange="UpdateAC()">
+                        <option value="none">None</option>
+                        <option value="shield">Shield</option>
+                    </select>
+                    <br><br>
+
+                    <h6>AC:</h6>
+                    <input type="number" id="armorClass" placeholder="0">
                 </section>
                 </div>
 
