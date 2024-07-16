@@ -2,6 +2,7 @@
 body {
   background: linear-gradient(purple, blue);
   background: linear-gradient(in lch, purple, blue);
+  height: 100vh;
   color: rgb(39, 127, 156);
 }
 
