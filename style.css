@@ -10,6 +10,10 @@ body {
   width: 100%;
 }
 
+#shieldHere {
+  background-image: url(/assets/shield.png);
+}
+
 .table tr {
   color: rgb(39, 127, 156);
 }
