@@ -5,7 +5,7 @@ html, body {
   background-size: cover;
   height: 100%;
   color: rgb(39, 127, 156);
-  min-width: 935px;
+  min-width: 1400px;
 }
 
 .table input[type=number] {
