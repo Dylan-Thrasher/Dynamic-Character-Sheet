@@ -12,6 +12,16 @@ html, body {
   width: 100%;
 }
 
+
+#nameTagHere {
+  background-image: url('./assets/name-tag.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 650px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
 #heartHere {
   background-image: url('./assets/heart-gif.gif');
   background-repeat: no-repeat;
