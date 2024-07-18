@@ -16,15 +16,16 @@ html, body {
   background-image: url('./assets/heart-gif.gif');
   background-repeat: no-repeat;
   padding-top: 100px;
+  padding-bottom: 100px;
   background-position: center;
+  background-position-x: center;
   background-size: inherit;
-  
 }
 
 #shieldHere {
   background-image: url('./assets/shield.png');
   /* background-size: contain no-repeat center center fixed; */
-  background-position: inherit;
+  background-position: top center;
   height: 500px;
   padding-top: 100px;
 }
