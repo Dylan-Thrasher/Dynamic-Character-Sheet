@@ -12,8 +12,14 @@ html, body {
   width: 100%;
 }
 
+#heartHere {
+  background-image: url('./assets/heart.png');
+  padding-top: 100px;
+  height: 500px;
+}
+
 #shieldHere {
-  background-image: url('./shield.png');
+  background-image: url('./assets/shield.png');
   /* background-size: contain no-repeat center center fixed; */
   background-position: top center;
   height: 500px;
