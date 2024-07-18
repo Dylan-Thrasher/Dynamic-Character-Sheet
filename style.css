@@ -14,6 +14,7 @@ html, body {
 
 #heartHere {
   background-image: url('./assets/heart.png');
+  background-repeat: no-repeat;
   padding-top: 100px;
   height: 500px;
 }
