@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const diceTypeSelect = document.getElementById('dice-type');
     const addDiceButton = document.getElementById('add-dice');
     const rollDiceButton = document.getElementById('roll-dice');
+    const resetDiceButton = document.getElementById('reset-dice');
 
     const dice = [];
 
@@ -33,6 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         totalDiv.textContent = `Total: ${total}`;
+    });
+
+    resetDiceButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        dice.length = 0; // Clear the dice array
+        diceList.innerHTML = ''; // Clear the dice list display
+        resultsDiv.innerHTML = ''; // Clear the results display
+        totalDiv.innerHTML = ''; // Clear the total display
     });
 
     function rollDie(sides) {
