@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dice = [];
 
     addDiceButton.addEventListener('click', () => {
+        event.preventDefault();
         const diceType = diceTypeSelect.value;
         const diceLabel = `d${diceType}`;
         const diceElement = document.createElement('div');
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     rollDiceButton.addEventListener('click', () => {
+        event.preventDefault();
         resultsDiv.innerHTML = '';
         totalDiv.innerHTML = '';
         
