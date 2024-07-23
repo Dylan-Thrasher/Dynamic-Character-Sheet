@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addDiceButton = document.getElementById('add-dice');
     const rollDiceButton = document.getElementById('roll-dice');
     const resetDiceButton = document.getElementById('reset-dice');
+    const modifierInput = document.getElementById('modifier');
 
     const dice = [];
 
@@ -33,7 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
             resultsDiv.appendChild(resultElement);
         });
 
-        totalDiv.textContent = `Total: ${total}`;
+        const modifier = parseInt(modifierInput.value) || 0;
+        total += modifier;
+
+        totalDiv.textContent = `Total: ${total} (Modifier: ${modifier})`;
     });
 
     resetDiceButton.addEventListener('click', (event) => {
@@ -42,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         diceList.innerHTML = ''; // Clear the dice list display
         resultsDiv.innerHTML = ''; // Clear the results display
         totalDiv.innerHTML = ''; // Clear the total display
+        modifierInput.value = 0; // Reset the modifier input
     });
 
     function rollDie(sides) {
