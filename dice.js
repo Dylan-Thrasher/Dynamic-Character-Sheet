@@ -37,7 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const modifier = parseInt(modifierInput.value) || 0;
         total += modifier;
 
-        totalDiv.textContent = `Total: ${total} (Modifier: ${modifier})`;
+        const formattedModifier = modifier > 0 ? `+${modifier}` : `${modifier}`;
+
+        totalDiv.textContent = `Total: ${total} (Modifier: ${formattedModifier})`;
     });
 
     resetDiceButton.addEventListener('click', (event) => {
