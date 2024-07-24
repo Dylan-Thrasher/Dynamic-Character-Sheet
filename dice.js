@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dice = [];
 
     addDiceButton.addEventListener('click', () => {
+        // prevents reload from selecting button
         event.preventDefault();
         const diceType = diceTypeSelect.value;
         const diceLabel = `d${diceType}`;
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     rollDiceButton.addEventListener('click', () => {
         event.preventDefault();
+        // adds results to the html
         resultsDiv.innerHTML = '';
         totalDiv.innerHTML = '';
         
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const modifier = parseInt(modifierInput.value) || 0;
+        // adds modifier to existing total variable
         total += modifier;
 
         const formattedModifier = modifier > 0 ? `+${modifier}` : `${modifier}`;
