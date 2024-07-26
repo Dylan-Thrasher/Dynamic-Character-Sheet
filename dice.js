@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const modifier = parseInt(modifierInput.value) || 0;
         // adds modifier to existing total variable
         total += modifier;
-
+        // adds a plus sign for any modifier over zero
         const formattedModifier = modifier > 0 ? `+${modifier}` : `${modifier}`;
 
         totalDiv.textContent = `Total: ${total} (Modifier: ${formattedModifier})`;
