@@ -74,6 +74,10 @@ html, body {
   max-width: 75%;
 }
 
+#modifier {
+  width: 50px;
+}
+
 /* providing space for sections below */
 select {
   padding: 4px;
