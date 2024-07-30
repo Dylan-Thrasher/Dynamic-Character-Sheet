@@ -62,6 +62,10 @@ html, body {
   border-radius: 5px;
 }
 
+#dice-type {
+  width: 70px;
+}
+
 .center-me {
   text-align: center;
 }
