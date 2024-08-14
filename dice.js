@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //handle click for roll buttons in skill table
     document.querySelectorAll('.roll-button').forEach(button => {
+        button.addEventListener('click', (e) => {
         e.preventDefault();
         const scoreId = button.getAttribute('data-score-id');
         const scoreElement = document.getElementById(scoreId);
@@ -73,7 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
         resultElement.textContent = `Roll: d20 + ${score} (modifier) = ${total}`;
         resultsDiv.appendChild(resultElement);
         totalDiv.textContent = `Total: ${total}`;
-    })
+    });
+    });
 
     function rollDie(sides) {
         return Math.floor(Math.random() * sides) + 1;
