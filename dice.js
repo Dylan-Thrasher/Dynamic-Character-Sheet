@@ -54,6 +54,27 @@ document.addEventListener('DOMContentLoaded', () => {
         modifierInput.value = 0; // Reset the modifier input
     });
 
+    //handle click for roll buttons in skill table
+    document.querySelectorAll('.roll-button').forEach(button => {
+        event.preventDefault();
+        const scoreId = button.getAttribute('data-score-id');
+        const scoreElement = document.getElementById(scoreId);
+        const score = parseInt(scoreElement.value) || 0;
+
+        //Rolls a D20 and adds skill modifier
+        const roll = rollDie(20);
+        const total = roll + score;
+
+        //Displays result in the dice roller on other section of page
+        resultsDiv.innerHTML = '';
+        totalDiv.innerHTML = '';
+
+        const resultElement = document.createElement('div');
+        resultElement.textContent = `Roll: d20 + ${score} (modifier) = ${total}`;
+        resultsDiv.appendChild(resultElement);
+        totalDiv.textContent = `Total: ${total}`;
+    })
+
     function rollDie(sides) {
         return Math.floor(Math.random() * sides) + 1;
     }
