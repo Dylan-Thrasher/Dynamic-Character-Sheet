@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //handle click for roll buttons in skill table
     document.querySelectorAll('.roll-button').forEach(button => {
-        event.preventDefault();
+        e.preventDefault();
         const scoreId = button.getAttribute('data-score-id');
         const scoreElement = document.getElementById(scoreId);
         const score = parseInt(scoreElement.value) || 0;
