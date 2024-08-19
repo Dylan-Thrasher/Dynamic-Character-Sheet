@@ -21,8 +21,9 @@ html, body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 650px;
-  padding-top: 200px;
+  padding-top: 250px;
   padding-bottom: 200px;
+  padding-left: 30px;
 }
 
 #heartHere {
@@ -45,6 +46,10 @@ html, body {
 
 #shieldHere input[type=number] {
   width: 10%;
+}
+
+#notes {
+  line-height: 5;
 }
 
 .table tr {
