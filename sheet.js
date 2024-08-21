@@ -14,7 +14,7 @@ function LoadSheet() {
     })
 }
 
-// test for Notes json addition info
+
 
 function PopulateData(data) {
     let playerList;
@@ -58,6 +58,18 @@ function SetLevel() {
         if (characterData[i].CharacterName == selectedCharacter) {
             document.getElementById("playerLevel").value = characterData[i].Level;
             SetProficiencyBonus();
+            return;
+        }
+    }
+}
+
+
+// test for Notes json addition info
+function SetNotes() {
+    let selectedCharacter = document.getElementById("characterSelect").value;
+    for (let i = 0; i < characterData.length; i++) {
+        if (characterData[i].CharacterName == selectedCharacter) {
+            document.getElementById("PlayerNotes").value = characterData[i].PlayerNotes;
             return;
         }
     }
