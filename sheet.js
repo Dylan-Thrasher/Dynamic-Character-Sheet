@@ -28,6 +28,7 @@ function PopulateData(data) {
     }
     document.getElementById("players").innerHTML = playerList;
     LoadPlayer()
+    console.log(data);
 }
 
 function LoadPlayer() {
@@ -44,6 +45,7 @@ function LoadPlayer() {
 
 function LoadCharacter() {
     SetLevel();
+    SetNotes();
     UpdateAbilityScores();
     UpdateSkillProficiency();
     UpdateHP();
