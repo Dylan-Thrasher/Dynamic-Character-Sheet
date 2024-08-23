@@ -102,5 +102,13 @@ select {
 @media screen and (max-width: 830px) {
   .table input[type=number] {
     width: 35%;
+  };
+
+  #playerSelect {
+    width: 25px;
+  }
+
+  #characterSelect {
+    width: 25px;
   }
 }
