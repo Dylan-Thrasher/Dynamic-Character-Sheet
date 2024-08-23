@@ -99,7 +99,7 @@ select {
   border-radius: 5%;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 1500px) {
   .table input[type=number] {
     width: 35%;
   };
@@ -110,5 +110,9 @@ select {
 
   #characterSelect {
     width: 25px;
+  }
+
+  #rightBox {
+    width: 375px;
   }
 }
