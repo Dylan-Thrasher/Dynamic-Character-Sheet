@@ -12,6 +12,10 @@ html, body {
   width: 30%;
 }
 
+#playerNotes {
+  height: 70px;
+}
+
 #profBonus {
   width: 50%;
 }
@@ -46,10 +50,6 @@ html, body {
 
 #shieldHere input[type=number] {
   width: 10%;
-}
-
-#playerNotes {
-  line-height: 5;
 }
 
 .table tr {
