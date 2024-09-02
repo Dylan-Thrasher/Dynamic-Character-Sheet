@@ -105,11 +105,11 @@ select {
   };
 
   #playerSelect {
-    width: 25px;
+    width: 100px;
   }
 
   #characterSelect {
-    width: 25px;
+    width: 190px;
   }
 
   #rightBox {
