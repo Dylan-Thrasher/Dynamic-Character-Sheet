@@ -16,6 +16,10 @@ html, body {
   height: 70px;
 }
 
+#playerSelect {
+  width: 190px;
+}
+
 #profBonus {
   width: 50%;
 }
@@ -103,10 +107,6 @@ select {
   .table input[type=number] {
     width: 35%;
   };
-
-  #playerSelect {
-    width: 100px;
-  }
 
   #characterSelect {
     width: 190px;
